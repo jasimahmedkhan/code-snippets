@@ -1,0 +1,14 @@
+/home/airwolf/RiderProjects/design-patterns/design-patterns/bin/Debug/net9.0/design-patterns
+/home/airwolf/RiderProjects/design-patterns/design-patterns/bin/Debug/net9.0/design-patterns.deps.json
+/home/airwolf/RiderProjects/design-patterns/design-patterns/bin/Debug/net9.0/design-patterns.runtimeconfig.json
+/home/airwolf/RiderProjects/design-patterns/design-patterns/bin/Debug/net9.0/design-patterns.dll
+/home/airwolf/RiderProjects/design-patterns/design-patterns/bin/Debug/net9.0/design-patterns.pdb
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.GeneratedMSBuildEditorConfig.editorconfig
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.AssemblyInfoInputs.cache
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.AssemblyInfo.cs
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.csproj.CoreCompileInputs.cache
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.dll
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/refint/design-patterns.dll
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.pdb
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/design-patterns.genruntimeconfig.cache
+/home/airwolf/RiderProjects/design-patterns/design-patterns/obj/Debug/net9.0/ref/design-patterns.dll
