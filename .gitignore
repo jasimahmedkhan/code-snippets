@@ -1,3 +1,5 @@
 /.idea/
-DesignPatterns/obj
-OrderProcessing/obj
+**/bin/
+**/obj/
+*.dll
+*.pdb
