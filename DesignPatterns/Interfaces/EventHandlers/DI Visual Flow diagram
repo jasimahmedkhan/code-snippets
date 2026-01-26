@@ -1,0 +1,84 @@
+# Visual Flow Diagram
+
+[HTTP Request] 
+    ↓
+[ASP.NET Core Router]
+    ↓
+[DI Container] ← "I need OrderController"
+    ↓
+[DI Container] ← "OrderController needs EventHandler<OrderPlacedEvent>"
+    ↓
+[DI Container checks constraints] ← "OrderPlacedEvent implements IEvent? ✅"
+    ↓
+[DI Container] ← "Create OrderPlacedEventHandler"
+    ↓
+[DI Container] ← "OrderPlacedEventHandler needs IOrderRepository"
+    ↓
+[DI Container] ← "Create OrderRepository"
+    ↓
+[All dependencies resolved] → Create complete object graph
+    ↓
+[OrderController instance ready with all dependencies injected]
+    ↓
+[Execute action method]
+    ↓
+[Return HTTP response]
+
+
+
+# What Happens at Runtime
+
+1. User makes HTTP request → POST /orders
+   
+2. ASP.NET Core needs to create OrderController
+   
+3. DI Container sees constructor needs:
+   - EventHandler<OrderPlacedEvent>
+   - IQueryHandler<GetOrderByIdQuery, OrderDto>
+   
+4. DI Container looks up registrations:
+   - "EventHandler<OrderPlacedEvent> → create OrderPlacedEventHandler"
+   - "IQueryHandler<...> → create GetOrderByIdHandler"
+   
+5. But wait! OrderPlacedEventHandler needs dependencies:
+   - IValidator<OrderPlacedEvent>
+   - IUnitOfWork
+   - IEventPublisher
+   - IOrderRepository
+   
+6. DI Container creates those too (recursively)
+   
+7. DI Container creates OrderController with all dependencies
+   
+8. Request executes successfully
+
+
+# Complete Working Example
+
+// 1. Register in Program.cs
+builder.Services.AddScoped<IQueryHandler<GetOrderByIdQuery, OrderDto>, GetOrderByIdHandler>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+// 2. Inject in Controller
+public class OrderController : ControllerBase
+{
+    private readonly IQueryHandler<GetOrderByIdQuery, OrderDto> _handler;
+    
+    public OrderController(IQueryHandler<GetOrderByIdQuery, OrderDto> handler)
+    {
+        _handler = handler;  // DI injects GetOrderByIdHandler
+    }
+    
+    [HttpGet("orders/{id}")]
+    public async Task<IActionResult> GetOrder(Guid id)
+    {
+        var query = new GetOrderByIdQuery(id);
+        var result = await _handler.HandleAsync(query);
+        return Ok(result);
+    }
+}
+
+// 3. When request comes in:
+// DI creates: GetOrderByIdHandler(new OrderRepository(dbContext))
+// Then creates: OrderController(getOrderByIdHandler)
+// All automatic!
