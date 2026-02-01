@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace design_patterns.Interfaces.EventHandlers;
 
-public class Program
+public class ProgramEventHandlers
 {
     /*
  *1. User makes HTTP request → POST /orders
