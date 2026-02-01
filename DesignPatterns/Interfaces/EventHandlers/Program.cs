@@ -37,6 +37,8 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        // Add Controllers support 
+        builder.Services.AddControllers();
 
         // REGISTRATION PHASE: Tell DI container what to create
         builder.Services.AddScoped<IOrderRepository, OrderRepository>();
