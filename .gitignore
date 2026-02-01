@@ -3,4 +3,4 @@
 **/obj/
 *.dll
 *.pdb
-code-snippets.sln.DotSettings.user
+*.sln.DotSettings.user
