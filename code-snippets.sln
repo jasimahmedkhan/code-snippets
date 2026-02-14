@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing", "OrderProcessing\OrderProcessing.csproj", "{F8226E52-21F2-4650-BB7E-6DB50E87E69D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorPattern", "MediatorPattern\MediatorPattern.csproj", "{D958461E-3DEB-4F36-A2D1-D1C3EF135850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramSnippets", "ProgramSnippets\ProgramSnippets.csproj", "{BE53675B-F2AB-427B-A220-8AD0F608DAF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{F8226E52-21F2-4650-BB7E-6DB50E87E69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8226E52-21F2-4650-BB7E-6DB50E87E69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8226E52-21F2-4650-BB7E-6DB50E87E69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D958461E-3DEB-4F36-A2D1-D1C3EF135850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D958461E-3DEB-4F36-A2D1-D1C3EF135850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D958461E-3DEB-4F36-A2D1-D1C3EF135850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D958461E-3DEB-4F36-A2D1-D1C3EF135850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE53675B-F2AB-427B-A220-8AD0F608DAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE53675B-F2AB-427B-A220-8AD0F608DAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE53675B-F2AB-427B-A220-8AD0F608DAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE53675B-F2AB-427B-A220-8AD0F608DAF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
