@@ -86,8 +86,7 @@ public class ProgramEmployee
             Console.WriteLine($"{employee.Name} earns {employee.Salary}");
         }
         
-        // Equilvalent manual iteration
-
+        // Equivalent manual iteration, need to manually dispose the enumerator object.
         using var iterator = company.GetEnumerator();
         while (iterator.MoveNext())
         {
