@@ -12,7 +12,11 @@ public class OrderContext
     }
 
 
-    public void ChangeState(IOrderState state)
+    // The internal access modifier means the method can only be accessed within the same assembly (DLL/EXE).
+    // Assembly = Your compiled project (.dll or .exe file)
+        // ✅ Can access: Any class in the same project/assembly
+        // ❌ Cannot access: Classes in other projects/assemblies that reference this one
+    internal void ChangeState(IOrderState state)
     {
         State = state;
     }
