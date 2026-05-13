@@ -99,9 +99,3 @@ cd DesignPatterns
 dotnet run --project <ProjectName>
 ```
 
-***
-
-## 👤 Author
-
-**Jasim Ahmed Khan**
-Backend Software Engineer — passionate about clean architecture, cloud-native systems, and continuous learning.
